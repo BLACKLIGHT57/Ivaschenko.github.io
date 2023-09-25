@@ -8,11 +8,29 @@
         </map>
         
 </head>
-<body style="margin:0;">
-    <div style="width:100%; background-color:#ccc; padding: 10px; height:120px;">
-    <img style="float:left; margin:10px; width:100px; height:100px;" src="https://openedu.kubsu.ru/pluginfile.php/1/core_admin/logocompact/300x300/1681820896/%D0%9A%D1%83%D0%B1%D0%93%D0%A32.png">
-    <div style="background-color:#ddd; padding:10px;">Практическое задание студента 210 группы Иващенко Александра</div>
-    </div>
+<body>
+    <header class="main">
+        <div class="container">
+            <div class="main__wrapper">
+                <div class="main__logo">
+                    <img src="https://openedu.kubsu.ru/pluginfile.php/1/core_admin/logocompact/300x300/1681820896/%D0%9A%D1%83%D0%B1%D0%93%D0%A32.png" class="main__logo-img" alt="#">
+                    <div class="main__logo-name">
+                        <p>Название</p>
+                    </div>
+                </div>
+                <div class="main__links">
+                    <ul class="main__link">
+                        <li><a href="/">Главная</a></li>
+                        <li><a href="/about.html">О нас</a></li>
+                        <li><a href="/files/page1.html">Другие страницы</a></li>
+                            
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+    </header>
 
         
     <li><a href="http://kubsu.ru">абсолютная гиперссылка на главную страницу сайта kubsu.ru</a></li>
@@ -35,7 +53,6 @@
     <li><a>ссылку без href</a></li>
     <li><a href="https://kubsu.ru">ссылку, по которой запрещен переход поисковикам</a></li>
     <li><a href="https://kubsu.ru">запрещенную для индексации поисковиками</a></li>
-
     <li><h3>Нумерованный список ссылок c подписями title</h3>
         <ol>
             <li>Первый пункт</li>
@@ -45,6 +62,53 @@
     </li>
     <li><a href="/form.html">ссылку на файл на сервере FTP c авторизацией</a></li>
 
+    
+<section class="table">
+            <div class="title"><h2>Расписание пар</h2></div>
+            <table class="table">
+                <tbody>
+                    <tr class="table__element table__element-odd">
+                        <th>День недели</th>
+                        <th>Начало пар</th>
+                        <th>Окончание пар</th>
+                        <th>Количество пар</th>
+                    </tr>
+                    <tr class="table__element table__element-even">
+                        <td>Понедельник</td>
+                        <td>9:30</td>
+                        <td>15.30</td>
+                        <td>4</td>
+                    </tr>
+                    <tr class="table__element table__element-odd">
+                        <td>Вторник</td>
+                        <td>8:00</td>
+                        <td>14:00</td>
+                        <td>4</td>
+                    </tr>
+                    <tr class="table__element table__element-even">
+                        <td>Среда</td>
+                        <td>8:00</td>
+                        <td>10:50</td>
+                        <td>2</td>
+                    </tr>
+                    <tr class="table__element table__element-odd">
+                        <td>Четверг</td>
+                        <td>11:10</td>
+                        <td>12:30</td>
+                        <td>1</td>
+                    </tr>
+                    <tr class="table__element table__element-even">
+                        <td>Пятница</td>
+                        <td>8:00</td>
+                        <td>12:30</td>
+                        <td>3</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+
+    
     <form id="form" action="#">
             <p><h2 id="block_3">Форма</h2></p>
             <p>
