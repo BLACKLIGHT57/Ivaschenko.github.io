@@ -51,20 +51,20 @@
                 <input type="radio" required name="sex" value="">Мужской<Br>
                 <input type="radio" required name="sex" value="">Женский<Br>
                 <br>
-                <h3>Любимый язык программирования </h3>
-                <input type="checkbox" name="lang" value="">pascal<Br>
-                <input type="checkbox" name="lang" value="">C<Br>
-                <input type="checkbox" name="lang" value="">C++<Br>
-                <input type="checkbox" name="lang" value="">JS<Br>
-                <input type="checkbox" name="lang" value="">PHP<Br>
-                <input type="checkbox" name="lang" value="">Python<Br>
-                <input type="checkbox" name="lang" value="">Java<Br>
-                <input type="checkbox" name="lang" value="">Haskel<Br>
-                <input type="checkbox" name="lang" value="">Clojure<Br>
-                <input type="checkbox" name="lang" value="">Prolog<Br>
-                <input type="checkbox" name="lang" value="">Scala<Br>
-                <br>
-                 
+
+
+        <h3>Список языков (listbox с множественным выбором):</h3>
+        <br/>
+        <select name="field-name-4[]" multiple="multiple">
+        <option value="Значение1">Pascal</option>
+        <option value="Значение2" selected="selected">С</option>
+        <option value="Значение3" selected="selected">С++</option>
+        <option value="Значение2" selected="selected">Java</option>
+        <option value="Значение3" selected="selected">Python</option>
+        <option value="Значение2" selected="selected">Clojure</option>
+        <option value="Значение3" selected="selected">Scala</option>
+        </select>
+      </label><br/> 
                <label>
         Биография:<br />
         <textarea required name="field-name-2"></textarea>
