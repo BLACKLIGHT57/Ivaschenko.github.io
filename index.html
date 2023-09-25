@@ -52,9 +52,16 @@
                 <input type="radio" required name="sex" value="">Женский<Br>
                 <br>
 
-
-        <h3>Список языков (listbox с множественным выбором):</h3>
-        <br/>
+       <h4>Список языков:</h4>h4>
+           
+        <select name="field-name-3">
+          <option value="Значение1">Pascal</option>
+          <option value="Значение2" selected="selected">С</option>
+          <option value="Значение3">С++</option>
+        </select>
+      
+        <h4>Список языков (listbox с множественным выбором):</h4>
+        
         <select name="field-name-4[]" multiple="multiple">
         <option value="Значение1">Pascal</option>
         <option value="Значение2" selected="selected">С</option>
@@ -64,9 +71,9 @@
         <option value="Значение2" selected="selected">Clojure</option>
         <option value="Значение3" selected="selected">Scala</option>
         </select>
-      </label><br/> 
-               <label>
-        Биография:<br />
+      
+               
+        <h5>Биография:</h5>
         <textarea required name="field-name-2"></textarea>
       </label><br />
                 <input type="checkbox" required name="" value="">с контрактом ознакомлен(а)<Br>
