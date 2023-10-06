@@ -7,22 +7,24 @@
         <area shape="rect" coords="185,225,268,352" href="https://youtu.be/frKvbJ9dMSk?feature=shared">
         </map>
   <style>
-#main-aside-wrapper {
+.container {
   display: flex;
-  flex-direction: column;
 }
-#main-aside-wrapper aside {
+.container aside {
     left:0px;
     flex: 1;
     order: 2;
 }
-#main-aside-wrapper main{
+.container main{
     flex: 4;
     order: 1;
-}
-@media screen and (max-width: 400px) {
-  #main-aside-wrapper {
-    flex-direction: row;
+}     
+@media all and (max-width: 400px) {
+  .container > li {
+    flex-basis: 100%;
+  }
+  .search {
+    order: 1;
   }
 }
    
