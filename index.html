@@ -1,210 +1,221 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <link rel="stylesheet" href="style.css">
-    <title>stanislav</title>
-    <meta name="robots" content="noindex">
-        <map name="clickable">
-        <area shape="circle" coords="154,82,30" href="https://www.youtube.com/watch?v=56lkofpjOAs">
-        <area shape="rect" coords="92,112,134,176" href="https://www.youtube.com/watch?v=QxtKHo0iMa4">
+    <link rel="stylesheet" href="../Stanislav/css.css">
+    <title>Задание по разарботке пользовательского Web-интерфейса</title>
+    <map name="clickable">
+        <area shape="circle" coords="309,164,60" href="https://youtu.be/nXCoEg05zPE?feature=shared">
+        <area shape="rect" coords="185,225,268,352" href="https://youtu.be/frKvbJ9dMSk?feature=shared">
         </map>
-        <script src="script.js"></script>
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-        <link rel="stylesheet"
-          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-        <script
-          src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-</head>
-<body>
-  
-        <header>
-    <div class="nav">
-        <div class="logo">
-            <img class="navi" src="https://openedu.kubsu.ru/pluginfile.php/1/core_admin/logocompact/300x300/1681820896/%D0%9A%D1%83%D0%B1%D0%93%D0%A32.png" alt="Логотип">
-        </div>
-        <div class="nav-bar">
-        <nav>
-            <ul>
-                <li><a href="#">Главная</a></li>
-                <li><a href="#">О нас</a></li>
-                <li><a href="#">Услуги</a></li>
-                <li><a href="#form">Форма</a></li>
-            </ul>
-        </nav>
-        </div>
-    </div>
-    </header>
-        
-    <br>
-    
-<div class="container abc">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+#main-aside-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+#main-aside-wrapper aside {
 
-<div class="megaref">
-    <ul class="ref">
+    width: 100px;
+    flex: 1;
+    order: 2;
+}
+#main-aside-wrapper tabla {
+    flex: 1;
+    order: 3;
+}
+#main-aside-wrapper main{
+    flex: 3;
+    order: 1;
+}
+@media screen and (min-width: 1000px) {
+  #main-aside-wrapper {
+    flex-direction: row;
+  }  
+}
+        </style>
+<style type="text/css">
+.classDis  {
+	display: flex;
+}
+table {
+	order: -1;
+}
+
+   </style>
+<style type="text/css">
+    body {
+        align-items: center;
+    }
+    table {
+    background: navy; /* Цвет фона таблицы */
+    color: white;
+   }
+   td {
+    background: red; /* Цвет фона ячеек */
+   }
+    th {
+    background: #008000; /* Цвет фона ячеек */
+   }
+
+   </style>
+    </head>
+<body>
+
+<div style="width:100%; background-color:#ccc;padding: 10px; height:220px;">
+        <div id="main-aside-wrapper">
+
+     <aside>
+            <nav>      
+                 <div class="leftcol">
+                     <div style="background-color:#00008b;padding: 10px">
+                        <a href="https://www.kubsu.ru/index.php" style="color: #ffffff">1)Главная </a>           
+                        <a href="https://vk.com/voron_57" style="color: #ffffff">2)О нас </a>                
+                        <a href="#forma" style="color: #ffffff">3)Форма </a>                                                           
+                        <a href="#table" style="color: #ffffff">4)Таблица</a> 
+                      </div>   
+                </div>           
+           </nav>
+     </aside>
+   <main> 
+    <img style="float:left; margin:10px; width:100px; height:100px;" src="https://openedu.kubsu.ru/pluginfile.php/1/core_admin/logocompact/300x300/1681820896/%D0%9A%D1%83%D0%B1%D0%93%D0%A32.png" alt="логотип" />
+  <div style="background-color:#00008b;padding: 10px; width:100%;"><font color="white";> <a> Задание по разарботке пользовательского Web-интерфейса </a></font>
+</div>
+
+       </main>    
+        </div>
+     </div>
+
+
+
+<div style="max-width:960px; background-color:#ccc; margin: 0 auto; margin-top:20px; padding:10px;">
+    <h1>Гиперссылки</h1> 
     <li><a href="http://kubsu.ru">абсолютная гиперссылка на главную страницу сайта kubsu.ru</a></li>
     <li><a href="https://kubsu.ru">абсолютная гиперссылка на главную сайта kubsu.ru в протоколе https</a></li>
+    <li><a href="https://kubsu.ru"><img src="https://openedu.kubsu.ru/pluginfile.php/1/core_admin/logocompact/300x300/1681820896/%D0%9A%D1%83%D0%B1%D0%93%D0%A32.png"></a></li>
     <li><a href="https://kubsu.ru">сокращенную ссылку на внутреннюю страницу</a></li>
     <li><a href="/index.html">сокращенную ссылку на главную страницу</a></li>
     <li><a href="https://kubsu.ru">ссылку на фрагмент текущей страницы</a></li>
-    <li><a href="https://www.example.com/page?param1=value1&param2=value2&param3=value3">ссылку c тремя параметрами в URL</a></li>
-    <li><a href="https://example.com/page?id=12345">ссылку c параметром id в URL</a></li>
+    <li><a href="https://kubsu.ru?param1=1&param2=2&param3=3">ссылку c тремя параметрами в URL</a></li>
+    <li><a id="example_id">ссылку c параметром id в URL</a></li>
     <li><a href="/">относительную на страницу в текущем каталоге</a></li>
     <li><a href="/about">относительную на страницу в каталоге about</a></li>
     <li><a href="./about">относительную на страницу в каталоге уровнем выше текущего</a></li>
     <li><a href="../about">относительную на страницу в каталоге двумя уровнями выше</a></li>
     <li><a href="https://kubsu.ru">контекстную в тексте абзаца</a></li>
     <li><a href="https://kubsu.ru">ссылку на фрагмент страницы стороннего сайта</a></li>
-    <li><a href="https://kubsu.ru">ссылки из прямоугольных и круглых областей картинки (HTML-тег map)</a></li>
-    <li><a href="">ссылку с пустым href</a></li>    
+    <li><a href="">ссылку с пустым href</a></li>
     <li><a>ссылку без href</a></li>
-    <li><a href="https://example.com/" rel="nofollow"> ссылку, по которой запрещен переход поисковикам</a></li>
-    <li><a href="https://kubsu.ru/noindex">запрещенную для индексации поисковиками</a></li>
-    <img usemap="#clickable" src="http://storage.yandexcloud.net/printio/assets/realistic_views/round_mouse_pad/detailed/e33cb41e30676638d1a60cb6f61bfc7daacdfbbf.jpg" alt="picture" width="300px" height="300px">
-    <li><a href="https://kubsu.ru"><img src="https://openedu.kubsu.ru/pluginfile.php/1/core_admin/logocompact/300x300/1681820896/%D0%9A%D1%83%D0%B1%D0%93%D0%A32.png"></a></li>
-    <ol class="ref">
-      <li><a href="ссылка_1" title="подпись_1">Ссылка 1</a>-title</li>
-      <li><a href="ссылка_2" title="подпись_2">Ссылка 2</a>-title</li>
-      <li><a href="ссылка_3" title="подпись_3">Ссылка 3</a>-title</li>
-  </ol>
-  <li class="123"><a href="ftp://username:password@ftp.server.com">ссылку на файл на сервере FTP c авторизацией</a></li>
-</ul>
-</div>
-          
-<div class="tablica">
-  <table>
-      <tr>
-        <th colspan="2">Заголовок 1</th>
-        <th>Заголовок 2</th>
-        <th>Заголовок 3</th>
-      </tr>
-      <tr>
-        <td rowspan="2">Ячейка 1</td>
-        <td>Ячейка 2</td>
-        <td>Ячейка 3</td>
-        <td>Ячейка 4</td>
-      </tr>
-      <tr>
-        <td>Ячейка 5</td>
-        <td>Ячейка 6</td>
-        <td>Ячейка 7</td>
-      </tr>
-      <tr>
-        <td>Ячейка 8</td>
-        <td>Ячейка 9</td>
-        <td>Ячейка 10</td>
-        <td>Ячейка 11</td>
-      </tr>
-      <tr>
-        <td>Ячейка 12</td>
-        <td>Ячейка 13</td>
-        <td>Ячейка 14</td>
-        <td>Ячейка 15</td>
-      </tr>
-      <tr>
-        <td>Ячейка 16</td>
-        <td>Ячейка 17</td>
-        <td>Ячейка 18</td>
-        <td>Ячейка 19</td>
-      </tr>
-      <tr>
-        <td>Ячейка 20</td>
-        <td>Ячейка 21</td>
-        <td>Ячейка 22</td>
-        <td>Ячейка 23</td>
-      </tr>
-    </table>
-  </div>
+    <li><a href="http://kubsu.ru" rel="nofollow">запрещающая переход</a></li>
+    <li><a href="http://kubsu.ru" rel="noindex">запрещаяющая индексацию</a></li>
+    <li>Нумерованный список ссылок c подписями title
+            <ol>
+                <li>Первый пункт</li>
+                <li>Второй пункт</li>
+                <li>Третий пункт</li>
+            </ol>
+        </li>
+    </div>  
 
-<div class="forma" id="form">
-<form action="#"
-  method="POST">
+        <div class="tabla">
+<div style="max-width:960px; background-color:#ccc; margin: 0 auto; margin-top:20px; padding:10px;">    
+<section class="table">
+    <form id="table" action="#">
 
-  <label>
-    Однострочное текстовое поле:<br />
-    <input name="field-name-1" placeholder="ФИО" />
-  </label><br />
+            <div class="title"><h2>Расписание пар</h2></div>
 
-  <label>
-    Номер телефона:<br />
-    <input type="tel" name="field-name-1" placeholder="Номер телефона" />
-  </label><br />
-
-  <label>
-    Текстовое поле email:<br />
-    <input name="field-email"
-      type="email"
-      placeholder="Введите вашу почту" />
-  </label><br />
-
-  <label>
-    Текстовое поле даты:<br />
-    <input name="field-date"
-      value="2019-08-13"
-      type="date" />
-  </label><br />
-
-  Ваш пол:<br />
-  <label><input type="radio" checked="checked"
-    name="radio-group-1" value="Значение1" />
-    Мужской</label>
-  <label><input type="radio"
-    name="radio-group-1" value="Значение2" />
-    Женский</label>
-    <br />
-
-          <label>
-    Список языков:<br />
-    <select name="field-name-3">
-      <option value="Значение1">Pascal</option>
-      <option value="Значение2" selected="selected">С</option>
-      <option value="Значение3">С++</option>
-    </select>
-  </label><br />
-
-  <label>
-    Список языков (listbox с множественным выбором):
-    <br />
-    <select name="field-name-4[]" multiple="multiple">
-      <option value="Значение1">Pascal</option>
-      <option value="Значение2" selected="selected">С</option>
-      <option value="Значение3" selected="selected">С++</option>
-    </select>
-  </label><br />
-
-  <label>
-    Многострочное текстовое поле:<br />
-    <textarea name="field-name-2">начальное значение</textarea>
-  </label><br />
-
-
-
-
-  Чекбокс:<br />
-  <label><input type="checkbox" checked="checked"
-    name="check-1" />
-    С контрактом ознакомлен</label><br />
- 
-  <input type="submit" value="Отправить" />
-</form>
-</div>
-</div>
-
-
-<footer class="footer">
-    <div class="container">
-       <div class="footer-content">
-          <h3>Directed by Stanislav Nyugay</h3>
-          <p>© 2021 Все права защищены</p>
-       </div>
-       <div class="footer-links">
-          <ul>
-             <li><a href="#">Главная</a></li>
-             <li><a href="#">О нас</a></li>
-             <li><a href="#">Продукты</a></li>
-             <li><a href="#">Контакты</a></li>
-          </ul>
-       </div>
+            <table class="table">
+                <tbody>
+                    <tr class="table__element table__element-odd">
+                        <th>День недели</th>
+                        <th>Начало пар</th>
+                        <th> Окончание пар</th>
+                        <th>Количество пар</th>
+                    </tr>
+                    <tr class="table__element table__element-even">
+                        <td>Понедельник</td>
+                        <td colspan="2">9:30 - 15.30</td>
+                        <td>4</td>
+                    </tr>
+                    <tr class="table__element table__element-odd">
+                        <td>Вторник</td>
+                        <td colspan="2">8:00 - 14:00</td>
+                        <td>4</td>
+                    </tr>
+                    <tr class="table__element table__element-even">
+                        <td>Среда</td>
+                        <td colspan="2">8:00 - 10:50</td>
+                        <td>2</td>
+                    </tr>
+                    <tr class="table__element table__element-odd">
+                        <td>Четверг</td>
+                        <td colspan="2">11:10 - 12:30</td>
+                        <td>1</td>
+                    </tr>
+                    <tr class="table__element table__element-even">
+                        <td>Пятница</td>
+                        <td colspan="2">8:00 - 12:30</td>
+                        <td>3</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
     </div>
- </footer>
+        </classDis>
+<div style="max-width:960px; background-color:#ccc; margin: 0 auto; margin-top:20px; padding:10px;" id="forma">
+<form action="#">
+    <form class="formal">
+
+            <p><h2 id="block_3">Форма</h2></p>
+            <p>
+                <input type="text" required name="name1" placeholder="Имя"><Br>
+                <input type="tel" required name="name2" placeholder="телефон"><Br>
+                <input type="email" required name="name3" placeholder="e-mail"><br>
+                <input type="date" required name="name4" value="2019-08-13"><Br>
+                <br>
+                <h3>Пол </h3>
+                <input type="radio" required name="sex" value="">Мужской<Br>
+                <input type="radio" required name="sex" value="">Женский<Br>
+                <br>
+       <h4>Список языков:</h4>
+
+        <select name="field-name-3">
+        <option value="Значение1">Pascal</option>
+        <option value="Значение2" selected="selected">С</option>
+        <option value="Значение3">С++</option>
+        <option value="Значение2">Java</option>
+        <option value="Значение3">Python</option>
+        <option value="Значение2">Clojure</option>
+        <option value="Значение3">Scala</option>
+        </select>
+
+        <h4>Список языков (listbox с множественным выбором):</h4>
+
+        <select name="field-name-4[]" multiple="multiple">
+        <option value="Значение1">Pascal</option>
+        <option value="Значение2" selected="selected">С</option>
+        <option value="Значение3" selected="selected">С++</option>
+        <option value="Значение2" selected="selected">Java</option>
+        <option value="Значение3" selected="selected">Python</option>
+        <option value="Значение2" selected="selected">Clojure</option>
+        <option value="Значение3" selected="selected">Scala</option>
+        </select>
+
+
+        <h5>Биография:</h5>
+        <textarea required name="field-name-2"></textarea>
+      </label><br />
+                <input type="checkbox" required name="" value="">с контрактом ознакомлен(а)<Br>
+                <input type="submit" value="Сохранить" class="btn">
+
+</form>
+    </div>    
+    <div style="max-width:960px; background-color:#ccc; margin: 0 auto; margin-top:20px; padding:10px;">
+    <img usemap="#clickable" src="https://kartinkin.net/uploads/posts/2022-02/1645501897_47-kartinkin-net-p-kartinki-kruglie-49.png" alt="picture" width="300px" height="300px">
+      </div>   
+
+    <footer>
+        <div style="max-width:960px; background-color:#ccc; margin: 0 auto; margin-top:20px; padding:10px;">
+            <a>(c) Aleksandr Ivaschenko</a> 
+        </div>   
+    </footer>
 </body>
 </html>
