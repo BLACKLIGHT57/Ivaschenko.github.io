@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>kalkulator_alert</title>
+  <title>Document</title>
   <style>
     body {
       font-family: 'Roboto', sans-serif;
@@ -46,7 +46,14 @@
       let s = document.getElementsByName("select1");
       
       event.preventDefault();
+      if(numProduct[0].value<0)
+      {
+        
+        alert(-numProduct[0].value * parseInt(s[0].value));
+      }
+      else{
       alert(numProduct[0].value * parseInt(s[0].value));
+      }
       return false;
     }
     window.addEventListener('DOMContentLoaded', function (event) {
