@@ -1,66 +1,134 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <style>
-    body {
-      font-family: 'Roboto', sans-serif;
-      font-size: 16px;
-    }
-    .wrapper {
-      width: 1200px;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-top: 40px;
-    }
-    #result {
-      margin-top: 10px;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<style>
+body {
+font-family: 'Roboto', sans-serif;
+font-size: 16px;
+}
+.wrapper {
+width: 1200px;
+margin: 0 auto;
+display: flex;
+flex-direction: column;
+align-items: center;
+margin-top: 40px;
+}
+#result {
+margin-top: 10px;
+}
+input {
+margin: 5px 0;
+}
+#myradios {
+display: none;
+}
+#checkbox_block {
+display: none;
+}
+</style>
 </head>
-<body >
-  <div class="wrapper">
-    <h1>Калькулятор стоимости товара</h1>
-    <form>
-        <input name="field1" type="number" placeholder="Введите кол-во товаров">
-        <select name="select1">
-        <option value="100">Болты</option>
-        <option value="150">Шурупы</option>
-        <option value="200">Гвозди</option>
-        <option value="250">Гайки</option>
-      </select>
-      <button id="button1" onclick="return click1();">Посчитать</button>
-      <div id="result"></div>
-    </form>
-  </div>
-  
+<body>
+<div class="wrapper">
+<form>
+<h1>Калькулятор стоимости товара</h1>
 
-  <script type="text/javascript">
-    function click1() {
-        let numProduct = document.getElementsByName("field1");
-      let r = document.getElementById("result");
-      let s = document.getElementsByName("select1");
-      
-      event.preventDefault();
-      if(numProduct[0].value<0)
+<input name="field1" type="number" placeholder="Введите кол-во товаров">
+<select name="myselect">
+    <option value="100">Болты</option>
+    <option value="150">Шурупы</option>
+    <option value="200">Гвозди</option>
+</select>
+<button id="button1" onclick="return calc();">Посчитать</button>
+
+<div class="myradios" id="myradios">
+<label><input type="radio" name="myradio" value="0">Материал 1</label>
+<label><input type="radio" name="myradio" value="20">Материал 2</label>
+<label><input type="radio" name="myradio" value="40">Материал 3</label>
+</div>
+<div id="checkbox_block">
+<input type="checkbox" name="lang" id="checks" value="1">2 партии
+
+</div>
+</form>
+</div>
+
+
+<script type="text/javascript">
+window.addEventListener('DOMContentLoaded', function (event) {
+let s = document.getElementsByName("myselect");
+s[0].addEventListener("change", function(event) {
+let select = event.target;
+let radios = document.getElementById("myradios");
+let checkbox = document.getElementById("checkbox_block");
+console.log(select.value);
+// Можно использовать getElementsByClassName()
+if (select.value == "150") {
+radios.style.display = "block";
+}
+else {
+radios.style.display = "none";
+}
+if (select.value == "200") {
+checkbox_block.style.display = "block";
+}
+else {
+checkbox_block.style.display = "none";
+}
+});
+
+let r = document.querySelectorAll(".myradios input[type=radio]");
+r.forEach(function(radio) {
+radio.addEventListener("change", function(event) {
+let r = event.target;
+console.log(r.value);
+});
+});
+
+});
+
+function calc() {
+let numProduct = document.getElementsByName("field1")[0].value;
+let r = document.getElementById("result");
+let s = document.getElementsByName("myselect");
+console.log(numProduct);
+
+let dopRadio = 0;
+
+let radios = document.getElementById("myradios");
+let checkbox = document.getElementById("checks");
+
+
+var coffee = document.getElementsByName("myradio");
+var i;
+for (i = 0; i < coffee.length; i++) {
+if (coffee[i].checked && parseInt(s[0].value) == 150) {
+dopRadio = parseInt(coffee[i].value);
+}
+}
+
+if (checkbox.checked && parseInt(s[0].value) == 200) {
+numProduct *= 2;
+}
+if (numProduct < 0)
       {
-        
-        alert(-numProduct[0].value * parseInt(s[0].value));
+        numProduct = -numProduct;
+        alert("Ответ(С модулем): "+ (numProduct * parseInt(s[0].value) + parseInt(dopRadio)));
       }
       else{
-      alert(numProduct[0].value * parseInt(s[0].value));
+      alert("Ответ: "+  (numProduct * parseInt(s[0].value) + parseInt(dopRadio)) );
       }
-      return false;
-    }
-    window.addEventListener('DOMContentLoaded', function (event) {
-    console.log("DOM fully loaded and parsed");
-    let b = document.getElementById("button1");
-    b.addEventListener(numProduct[0].value * parseInt(s[0].value), click1);
-    });
-  </script>  
+      
+    
+
+console.log(dopRadio);
+console.log(s[0].value);
+return false;
+}
+
+</script>
 </body>
 </html>
